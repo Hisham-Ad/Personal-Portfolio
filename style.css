@@ -1,0 +1,157 @@
+:root {
+  --main-white: white;
+  --main-black: black;
+  --main-grey: #B9B9B9;
+  --main-blue: blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--main-white);
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+}
+
+#navbar {
+ display: flex;
+ justify-content: flex-end;
+ position: fixed;
+ width: 100%;
+ height: 105px;
+ z-index: 10;
+ gap: 2rem;
+ align-items: center;
+ background-color: var(--main-black);
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-lists {
+  text-decoration: none;
+  color: var(--main-white);
+  font-size: 1.3rem;
+  display: flex;
+  margin-right: 2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-lists:hover {
+  color: var( --main-blue);
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+h1 {
+  font-size: 2.8rem
+}
+
+p {
+  font-size: 1.5rem
+}
+
+h1, p {
+  margin: 0.6rem
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-white);
+}
+
+.projects-grid {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--main-grey);
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-tile {
+  background-color: var(--main-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--main-black);
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: var(--hover-pop);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--main-white);
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+#contact a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--main-black);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact a:hover {
+  color: var(--main-grey);
+  transform: var(--hover-pop);
+}
