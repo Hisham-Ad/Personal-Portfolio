@@ -56,9 +56,29 @@ body {
   color: var( --main-blue);
 }
 
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
+@media (max-width: 600px) {
+  #navbar {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+    #navbar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .project-tile {
+    padding: 1rem;
+  }
+
+  #contact a {
+    display: block;
+    margin: 0.3rem 0;
   }
 }
 
